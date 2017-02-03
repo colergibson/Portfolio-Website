@@ -100,7 +100,6 @@ img.profile {
 .card-container {
 	height: 12em;
 	width: 12em;
-	perspective: 600;
 	position: relative;
 	margin: .625em auto;
 }
