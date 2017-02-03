@@ -14,27 +14,6 @@ header {
 	color: #328CC1;
 }
 
-h1 {
-	font-family: "libre baskerville";
-	font-weight: bold;
-	font-size: 3em; 
-	color: #328CC1;
-}
-	
-p {
-	font-family: "adelle sans";
-	font-size: 2em;
-	color: #D9B310;
-}
-	
-img {
-	width:3em;
-	height:3em;
-	margin:auto;
-	padding:1rem;
-	border-radius: 50%;
-}
-
 nav {
 	text-align: center;
 	font-size: 1.5em;
@@ -43,7 +22,7 @@ nav {
 	color: #D9B310;
 }
 
-a {
+nav a {
 	color: #D9B310;
 	font-family: 'baskerville';
 	font-weight: bold;
@@ -52,14 +31,104 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
 	color: #328CC1;
+}
+
+h1 {
+	font-family: "libre baskerville";
+	font-weight: bold;
+	font-size: 3em; 
+	color: #328CC1;
+}
+
+p {
+	font-family: 'Merriweather', serif;
+	font-size: 2em;
+	color: #D9B310;
+}
+
+p a {
+	color: #328CC1;
+	text-decoration: none;
+}
+
+p a:hover {
+	text-decoration: underline;
 }
 
 footer {
 	background-color: #1D2731;
 	font-family: "libre baskerville";
-	text-align: right;
+	text-align: center;
 	color: #328CC1;
 	padding: 1rem;
+}
+/* FLEX BOX */
+
+.content-flex-container {
+	display: flex;
+}
+
+.aside-flex-container {
+	display:flex;
+}
+
+.flex-item{
+	max-width:100%;
+	margin:auto;
+}
+
+section {
+	flex:3;
+}
+
+aside {
+	flex:1;
+}
+
+/* PROFILE PICTURE CARD */
+
+img.profile {
+	width: 12em;
+	height: 12em;
+	margin: auto;
+	border: .25em solid #ffffff;
+	border-radius: 50%;
+}
+
+.card-container {
+	height: 12em;
+	width: 12em;
+	perspective: 600;
+	position: relative;
+	margin: .625em auto;
+}
+
+.card{
+	height: 12em;
+	width: 12em;
+	position: absolute;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+}
+
+.card:hover {
+	transform: rotateY(180deg);
+}
+
+.card .side {
+	height: 12em;
+	width: 12em;
+	backface-visibility: hidden;
+	position: absolute;
+	border-radius: 50%;
+	color:#D9B310;
+}
+
+.card .back {
+	transform: rotateY(180deg);
+	border: .25em solid #ffffff;
+	background: #0B3C5D;
+	color:#D9B310;
 }
