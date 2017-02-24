@@ -2,9 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Cole Gibson's Portfolio</title>
+		<title>About</title>
 		<link rel="stylesheet" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -12,28 +11,30 @@
 			Cole Gibson's Portfolio
 		</header>
 		
-		<nav>
-			<a href="index.html">HOME</a>
-			<a href="resume.html">RESUME</a>
-			<a href="projects.html">PROJECTS</a>
+		<nav class= "nav-flex-container">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="resume.html">RESUME</a></li>
+				<li><a href="experience.html">EXPERIENCE</a></li>
+			</ul>
 		</nav>
 		
 		<div class="content-flex-container">
 			<section>
 				<h1>About Myself</h1>
 				
-				<p> I am a 23 year old student who is currently studying at the <a href="https://sils.unc.edu/">School of Information and Library Science at the University of North Carolina</a>. I have aspirations to work in a library environment with a focus in technical services but I have experience in reference, circulation, and inter-library loan.</p>
+				<p> I am a <span id="age-today">My age</span> year old student who is currently studying at the <a href="https://sils.unc.edu/">School of Information and Library Science at the University of North Carolina</a>. I have aspirations to work in a library environment with a focus in technical services but I have experience in reference, circulation, and inter-library loan.</p>
 
 				<p> Early in my life I was fortunate enough to have the opportunity to shadow at <a href="http://www.wfu.edu/">Wake Forest University</a> and explore the many possible avenues that existed in the library world. Since that opportunity I have volunteered at my public library, the Charles H. Stone Memorial Library in Pilot Mountain, worked as an undergraduate page at the <a href="http://www.highpoint.edu/library/">Smith Library</a> at <a href="http://www.highpoint.edu/">High Point University</a> and was fortunate to continue working there after my graduation; with a Bachelor of Arts in English Literature, as a reference and inter-library loan assistant.</p>
 
-				<p> I began my study at SILS in 2016 and plan to graduate in August of 2017 with a Masters in Library Science. For more information about my classroom experiences such as classes I have completed and projects completed please visit my <a href="projects.html">Projects page</a>.</p>
+				<p> I began my study at SILS in 2016 and plan to graduate in August of 2017 with a Masters in Library Science. For more information about my classroom experiences such as classes I have completed and projects completed please visit my <a href="experience.html">Experience page</a>.</p>
 			</section>
 			
 			<aside>
 				<div class="card_container">
 					<div class="card">
 						<div class="side">
-							<img class="profile" src="images/cole_gibson_headshot.png" alt="Cole Gibson Headshot">
+							<img class="profile" src="../Website/images/Cole_Gibson_Headshot.png" alt="Cole Gibson Headshot">
 							<h3> Hover for contact info</h3>
 						</div>
 	
@@ -48,3 +49,6 @@
 		<footer>
 			Contact Me:<br>colergibson@gmail.com
 		</footer>
+		<script src = "javascript/age_script.js"></script>
+	</body>
+</html>

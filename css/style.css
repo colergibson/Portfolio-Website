@@ -1,5 +1,4 @@
 body {
-	/*background: linear-gradient(to left, #141E30 , #243B55);*/
 	background-color: #0B3C5D;
 	text-align: center;
 }
@@ -12,6 +11,13 @@ header {
 	text-align: center; 
 	text-transform: capitalize;
 	color: #328CC1;
+}
+
+.nav-flex-container ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 nav {
@@ -42,9 +48,41 @@ h1 {
 	color: #328CC1;
 }
 
-p {
-	font-family: 'Merriweather', serif;
+h1 a {
+	color: #328CC1;
+	font-family: 'baskerville';
+	font-weight: bold;
+	text-decoration: none;
+}
+
+h1 a:hover {
+	text-decoration: underline;
+}
+
+li {
+	font-family: 'baskerville';
+	color: #D9B310;
+	list-style: none;
+	text-align: left;
+}
+
+ul h2 {
+	font-family: "libre baskerville";
+	font-weight: bold;
 	font-size: 2em;
+	text-align: left;
+	color: #328CC1;
+}
+
+ul p {
+	font-family: 'baskerville';
+	font-size: 1 em;
+	color: #D9B310;
+}
+	
+p {
+	font-family: 'baskerville';
+	font-size: 1.5em;
 	color: #D9B310;
 }
 
@@ -57,6 +95,14 @@ p a:hover {
 	text-decoration: underline;
 }
 
+#age-today {
+	font-family: 'baskerville';
+	font-size: 1em;
+	color: #D9B310;
+	margin: 0;
+	cursor: auto;
+}
+
 footer {
 	background-color: #1D2731;
 	font-family: "libre baskerville";
@@ -64,6 +110,7 @@ footer {
 	color: #328CC1;
 	padding: 1rem;
 }
+
 /* FLEX BOX */
 
 .content-flex-container {
@@ -130,4 +177,47 @@ img.profile {
 	border: .25em solid #ffffff;
 	background: #0B3C5D;
 	color:#D9B310;
+}
+
+/* AUDIO CONTAINER */
+
+#audio-container {
+	text-align: center;
+    margin: .1% auto;
+	width: 50%;
+    background-color: #1D2731;
+    padding-top: .2%;
+}
+
+#audio-container a {
+	color: #D9B310;
+	text-decoration: none;
+}
+
+#audio-container a:hover {
+	color: #328CC1;
+	text-decoration: underline;
+}
+
+#controls {
+	padding: .625em;
+	color: #328CC1;
+}
+  
+span {
+	margin: 0 .625em;
+	color: #328CC1;
+	cursor: pointer;
+}
+
+#progress {
+    margin: 5%;
+    border: .063em solid #328CC1;
+    border-radius: .313em;
+}
+
+#bar {
+    height: 1.250em;
+    background-color: #328CC1;
+    width: 0;
 }
