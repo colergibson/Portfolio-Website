@@ -59,14 +59,7 @@ h1 a:hover {
 	text-decoration: underline;
 }
 
-li {
-	font-family: 'baskerville';
-	color: #D9B310;
-	list-style: none;
-	text-align: left;
-}
-
-ul h2 {
+h2 {
 	font-family: "libre baskerville";
 	font-weight: bold;
 	font-size: 2em;
@@ -74,10 +67,11 @@ ul h2 {
 	color: #328CC1;
 }
 
-ul p {
+p.classes {
 	font-family: 'baskerville';
-	font-size: 1 em;
 	color: #D9B310;
+	font-size: 1em;
+	text-align: left;
 }
 	
 p {
