@@ -317,7 +317,6 @@ span {
 }
 .ui-draggable-handle {
 	-ms-touch-action: none;
-	touch-action: none;
 }
 .ui-resizable {
 	position: relative;
@@ -327,7 +326,6 @@ span {
 	font-size: 0.1px;
 	display: block;
 	-ms-touch-action: none;
-	touch-action: none;
 }
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
@@ -391,7 +389,6 @@ span {
 }
 .ui-selectable {
 	-ms-touch-action: none;
-	touch-action: none;
 }
 .ui-selectable-helper {
 	position: absolute;
@@ -400,7 +397,6 @@ span {
 }
 .ui-sortable-handle {
 	-ms-touch-action: none;
-	touch-action: none;
 }
 .ui-accordion .ui-accordion-header {
 	display: block;
@@ -894,7 +890,6 @@ button.ui-button::-moz-focus-inner {
 	height: 1.2em;
 	cursor: default;
 	-ms-touch-action: none;
-	touch-action: none;
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
