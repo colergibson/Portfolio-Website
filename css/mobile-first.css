@@ -19,7 +19,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
+	align-items: center;
+	justify-content: space-around;
 }
 
 nav {
@@ -29,6 +30,9 @@ nav {
 	background-color: #1D2731;
 	color: #D9B310;
 	border-bottom: solid #D9B310 .1em;
+}
+nav li {
+	padding: .3rem;
 }
 
 nav a {
