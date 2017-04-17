@@ -337,8 +337,7 @@ img.trumpetplaying {
 	}
 	
 	#item-1:hover {
-		  text-decoration:none;
-		text-decoration-color:none;
+		text-decoration:none;
 		cursor: default;
 	}
 	
@@ -364,7 +363,6 @@ img.trumpetplaying {
 	
 	#item-2:hover {
 		text-decoration:none;
-		text-decoration-color:none;
 		cursor:default;
 	}
 	
@@ -392,7 +390,6 @@ img.trumpetplaying {
 	
 	#item-3:hover {
 		text-decoration: none;
-		text-decoration-color: none;
 		cursor: default;
 	}
 	
@@ -424,7 +421,6 @@ img.trumpetplaying {
 	
 	#item-4:hover {
 		text-decoration: none;
-		text-decoration-color: none;
 		cursor: default;
 	}
 	
