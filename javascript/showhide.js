@@ -27,7 +27,8 @@ function showHide1 () {
 		document.querySelector('.item-3').style.display = "none";
 		document.querySelector('#item-3').style.display = "none";
 		document.querySelector('.item-4').style.display = "none";
-		document.querySelector('#item-4').style.display = "none"; }
+		document.querySelector('#item-4').style.display = "none"; 
+		document.querySelector('#resume-link').style.display = "none";}
 	else {
 		document.querySelector('#About-Myself').style.display = "none";
 		aboutMeText.innerHTML = "<h4>About Me</h4>";
@@ -37,7 +38,8 @@ function showHide1 () {
 		document.querySelector('.item-3').style.display = "grid";
 		document.querySelector('#item-3').style.display = "grid";
 		document.querySelector('.item-4').style.display = "grid";
-		document.querySelector('#item-4').style.display = "grid"; }
+		document.querySelector('#item-4').style.display = "grid";
+		document.querySelector('#resume-link').style.display = "grid";}
 }
 
 function showHide2 () {
@@ -51,7 +53,8 @@ function showHide2 () {
 		document.querySelector('.item-3').style.display = "none";
 		document.querySelector('#item-3').style.display = "none";
 		document.querySelector('.item-4').style.display = "none";
-		document.querySelector('#item-4').style.display = "none"; }
+		document.querySelector('#item-4').style.display = "none";
+		document.querySelector('#resume-link').style.display = "none";		}
 	else {
 		document.querySelector('#Education').style.display = "none";
 		document.querySelector(".item-2").style = "grid-column-start: 2;grid-column-end: 3;grid-row-start:1;grid-row-end: 2; align-self:end;";
@@ -63,7 +66,8 @@ function showHide2 () {
 		document.querySelector('.item-3').style.display = "grid";
 		document.querySelector('#item-3').style.display = "grid";
 		document.querySelector('.item-4').style.display = "grid";
-		document.querySelector('#item-4').style.display = "grid"; }
+		document.querySelector('#item-4').style.display = "grid";
+		document.querySelector('#resume-link').style.display = "grid";}
 }
 
 function showHide3 () {
@@ -77,7 +81,8 @@ function showHide3 () {
 		document.querySelector('#item-2').style.display = "none";
 		document.querySelector('.item-2').style.display = "none";
 		document.querySelector('.item-4').style.display = "none";
-		document.querySelector('#item-4').style.display = "none"; }
+		document.querySelector('#item-4').style.display = "none";
+		document.querySelector('#resume-link').style.display = "none";}
 	else {
 		document.querySelector('#Work-Experience').style.display = "none";
 		document.querySelector(".item-3").style = "grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 3; align-self:end;";
@@ -89,7 +94,8 @@ function showHide3 () {
 		document.querySelector('.item-2').style.display = "grid";
 		document.querySelector('#item-3').style.display = "grid";
 		document.querySelector('.item-4').style.display = "grid";
-		document.querySelector('#item-4').style.display = "grid"; }
+		document.querySelector('#item-4').style.display = "grid";
+		document.querySelector('#resume-link').style.display = "grid";}
 }
 
 function showHide4 () {
@@ -103,7 +109,8 @@ function showHide4 () {
 		document.querySelector('#item-2').style.display = "none";
 		document.querySelector('.item-2').style.display = "none";
 		document.querySelector('#item-3').style.display = "none";
-		document.querySelector('.item-3').style.display = "none"; }
+		document.querySelector('.item-3').style.display = "none";
+		document.querySelector('#resume-link').style.display = "none";}
 	else {
 		document.querySelector('#My-Interests').style.display = "none";
 		document.querySelector(".item-4").style = "grid-column-start: 2; grid-column-end: 3; grid-row-start: 2; grid-row-end: 3; align-self:end;";
@@ -115,5 +122,6 @@ function showHide4 () {
 		document.querySelector('.item-2').style.display = "grid";
 		document.querySelector('#item-3').style.display = "grid";
 		document.querySelector('.item-3').style.display = "grid";
-		document.querySelector('#item-4').style.display = "grid"; }
+		document.querySelector('#item-4').style.display = "grid";
+		document.querySelector('#resume-link').style.display = "grid";}
 }

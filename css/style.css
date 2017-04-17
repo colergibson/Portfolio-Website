@@ -292,6 +292,19 @@ img.trumpetplaying {
 	grid-row-end: 3;	
 }
 
+#resume-link {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;	
+}
+
+#resume-link a {
+	font-size: 2em;
+	color: #328CC1;
+}
+	
+
 @media (min-width: 50.0em) {
 	header {
 		font-size: 8em;
@@ -433,4 +446,9 @@ img.trumpetplaying {
 		grid-row-start: 8;
 		grid-row-end: 9;
 	}
+	
+	#resume-link {
+		justify-self: center;
+		grid-row-start: 9;
+		grid-row-end: 10;
 }
