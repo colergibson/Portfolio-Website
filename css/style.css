@@ -152,7 +152,7 @@ footer {
 	grid-template-columns: 8em 8em;
 	grid-template-rows: auto auto;
 	justify-content: center;
-	align-content: space-evenly;
+	align-content: space-around;
 }
 
 .item-1 {
@@ -160,7 +160,7 @@ footer {
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-1 {
@@ -168,7 +168,7 @@ footer {
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-1:hover {
@@ -194,7 +194,7 @@ img.profile {
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-2 {
@@ -202,7 +202,7 @@ img.profile {
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-2:hover {
@@ -228,7 +228,7 @@ img.graduation {
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-3 {
@@ -236,7 +236,7 @@ img.graduation {
 	grid-column-end: 2;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-3:hover {
@@ -262,7 +262,7 @@ img.headshot {
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-4 {
@@ -270,7 +270,7 @@ img.headshot {
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
-	align-self:end;
+	align-self:flex-end;
 }
 
 #item-4:hover {
@@ -314,7 +314,7 @@ img.trumpetplaying {
 	
 	p {
 		font-size: 2em;
-		text-justify: inner-word;
+		text-justify: inter-word;
 		margin: .5em;
 	}
 	
@@ -325,7 +325,7 @@ img.trumpetplaying {
 	
 	.item-1 {
 		justify-self: center;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-1 {
@@ -351,14 +351,14 @@ img.trumpetplaying {
 		grid-row-start: 3;
 		grid-row-end: 4;
 		justify-self: center;
-		align-self:start;
+		align-self:flex-start;
 	}
 	
 	#item-2 {
 		display: grid;
 		grid-row-start: 3;
 		grid-row-end: 4;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-2:hover {
@@ -376,7 +376,7 @@ img.trumpetplaying {
 		grid-row-start: 5;
 		grid-row-end: 6;
 		justify-self: center;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-3 {
@@ -385,7 +385,7 @@ img.trumpetplaying {
 		grid-column-end: 3;
 		grid-row-start: 5;
 		grid-row-end: 6;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-3:hover {
@@ -394,7 +394,7 @@ img.trumpetplaying {
 	}
 	
 	img.headshot {
-		width: 12m;
+		width: 12em;
 	}
 	
 	#Work-Experience {
@@ -409,14 +409,14 @@ img.trumpetplaying {
 		grid-row-start: 7;
 		grid-row-end: 8;
 		justify-self: center;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-4 {
 		display: grid;
 		grid-row-start: 7;
 		grid-row-end: 8;
-		align-self: start;
+		align-self: flex-start;
 	}
 	
 	#item-4:hover {
@@ -433,3 +433,4 @@ img.trumpetplaying {
 		grid-row-start: 8;
 		grid-row-end: 9;
 	}
+}
