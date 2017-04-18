@@ -304,7 +304,7 @@ img.trumpetplaying {
 	
 	p {
 		font-size: 2em;
-		text-justify: inner-word;
+		text-justify: inter-word;
 		margin: .2em;
 	}
 	
@@ -429,4 +429,5 @@ img.trumpetplaying {
 		grid-column-end: 5;
 		grid-row-start: 8;
 		grid-row-end: 9;
+}
 }
