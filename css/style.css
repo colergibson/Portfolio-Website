@@ -92,6 +92,7 @@ h4 {
 }
 
 h5 {
+	display:none;
 	font-family: "libre baskerville";
 	font-weight: bold;
 	font-size: 1.5em;
@@ -147,7 +148,7 @@ footer {
 	padding: 1rem;
 }
 
-.container {
+.grid-container {
 	display: grid;
 	grid-template-columns: 8em 8em;
 	grid-template-rows: auto auto;
@@ -164,17 +165,11 @@ footer {
 }
 
 #item-1 {
-	grid-column-start: 1;
-	grid-column-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
 	align-self:flex-end;
-}
-
-#item-1:hover {
-	text-decoration:underline;
-	text-decoration-color:white;
-	cursor: pointer;
 }
 
 img.profile {
@@ -183,32 +178,26 @@ img.profile {
 }
 
 #About-Myself {
-	display: none;
+	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
 .item-2 {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
 	align-self:flex-end;
 }
 
 #item-2 {
 	grid-column-start: 2;
 	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
 	align-self:flex-end;
-}
-
-#item-2:hover {
-	text-decoration:underline;
-	text-decoration-color:white;
-	cursor: pointer;
 }
 
 img.graduation {
@@ -217,32 +206,26 @@ img.graduation {
 }
 
 #Education {
-	display: none;
+	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
 }
 .item-3 {
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
 	align-self:flex-end;
 }
 
 #item-3 {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
 	align-self:flex-end;
-}
-
-#item-3:hover {
-	text-decoration:underline;
-	text-decoration-color:white;
-	cursor: pointer;
 }
 
 img.headshot {
@@ -251,32 +234,26 @@ img.headshot {
 }
 
 #Work-Experience {
-	display: none;
+	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 6;
+	grid-row-end: 7;
 }
 .item-4 {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 7;
+	grid-row-end: 8;
 	align-self:flex-end;
 }
 
 #item-4 {
 	grid-column-start: 2;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 7;
+	grid-row-end: 8;
 	align-self:flex-end;
-}
-
-#item-4:hover {
-	text-decoration:underline;
-	text-decoration-color:white;
-	cursor: pointer;
 }
 
 img.trumpetplaying {
@@ -285,18 +262,18 @@ img.trumpetplaying {
 }
 
 #My-Interests {
-	display: none;
+	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;	
+	grid-row-start: 8;
+	grid-row-end: 9;	
 }
 
 #resume-link {
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 3;
-	grid-row-end: 4;	
+	grid-row-start: 9;
+	grid-row-end: 10;	
 }
 
 #resume-link a {
@@ -327,13 +304,17 @@ img.trumpetplaying {
 	
 	p {
 		font-size: 2em;
-		text-justify: inter-word;
-		margin: .5em;
+		text-justify: inner-word;
+		margin: .2em;
 	}
 	
-	.container {
+	.grid-container {
 		grid-template-columns: auto auto auto;
-		grid-template-rows: auto auto auto auto auto auto;
+		grid-template-rows: 16em auto auto auto auto auto;
+		grid-column-gap: 2em;
+		grid-row-gap: 1em;
+		margin-left: 3em;
+		margin-right: 3em;
 	}
 	
 	.item-1 {
@@ -346,12 +327,11 @@ img.trumpetplaying {
 		grid-column-start: 2;
 		grid-column-end: 3;
 		justify-self: start;
-		align-self: center;
+		align-self: flex-start;
 	}
 	
-	#item-1:hover {
-		text-decoration:none;
-		cursor: default;
+	img.profile {
+		width: 9em;
 	}
 	
 	#About-Myself {
@@ -359,30 +339,33 @@ img.trumpetplaying {
 	}
 	
 	.item-2 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 3;
-		grid-row-end: 4;
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start:1;
+		grid-row-end:2;
 		justify-self: center;
 		align-self:flex-start;
 	}
 	
 	#item-2 {
 		display: grid;
-		grid-row-start: 3;
-		grid-row-end: 4;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start:1;
+		grid-row-end:2;
 		align-self: flex-start;
 	}
 	
-	#item-2:hover {
-		text-decoration:none;
-		cursor:default;
+	img.graduation {
+		width: 11em;
 	}
 	
 	#Education {
 		display: grid;
-		grid-row-start: 4;
-		grid-row-end: 5;
+		grid-column-start: 3;
+		grid-column-end: 5;
+		grid-row-start: 2;
+		grid-row-end: 3;
 	}
 	
 	.item-3 {
@@ -400,12 +383,7 @@ img.trumpetplaying {
 		grid-row-end: 6;
 		align-self: flex-start;
 	}
-	
-	#item-3:hover {
-		text-decoration: none;
-		cursor: default;
-	}
-	
+		
 	img.headshot {
 		width: 12em;
 	}
@@ -417,39 +395,38 @@ img.trumpetplaying {
 	}
 	
 	.item-4 {
-		grid-column-start: 1;
-		grid-column-end: 2;
-		grid-row-start: 7;
-		grid-row-end: 8;
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 5;
+		grid-row-end: 6;
 		justify-self: center;
 		align-self: flex-start;
 	}
 	
 	#item-4 {
 		display: grid;
-		grid-row-start: 7;
-		grid-row-end: 8;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 5;
+		grid-row-end: 6;
 		align-self: flex-start;
 	}
-	
-	#item-4:hover {
-		text-decoration: none;
-		cursor: default;
-	}
-	
 	img.trumpetplaying {
-		width: 12em;
+		width: 14em;
 	}
 	
 	#My-Interests {
 		display: grid;
-		grid-row-start: 8;
-		grid-row-end: 9;
+		grid-column-start: 3;
+		grid-column-end: 5;
+		grid-row-start: 6;
+		grid-row-end: 7;
 	}
 	
 	#resume-link {
 		justify-self: center;
-		grid-row-start: 9;
-		grid-row-end: 10;
-	}
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-start: 8;
+		grid-row-end: 9;
 }
