@@ -9,7 +9,8 @@ body {
 }
 
 .Site-content {
-  flex: 1;
+	margin: .5em;
+	flex: 1;
 }
 
 header { 
@@ -23,20 +24,32 @@ header {
 	color: #328CC1;
 }
 
-.nav-flex-container ul {
+.Desktop-navigation {
+	display: none;
+}
+
+.Menu {
 	list-style: none;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content:space-around;
+	flex-direction:column;
 	margin:0;
 	padding:0;
 }
 
+.menubutton {
+	display: flex;
+	cursor: pointer;
+}
+
+.menubutton:hover {
+	color: #328CC1;
+}
+
+.Main-navigation {
+	display: none;
+}
+
 nav {
-	flex-direction: row;
-	text-align: center;
 	font-size: 1em;
 	background-color: #1D2731;
 	color: #D9B310;
@@ -49,7 +62,6 @@ nav a {
 	font-family: 'baskerville';
 	font-weight: bold;
 	text-decoration: none;
-	justify-content:space-around;
 }
 
 nav a:hover {
@@ -59,7 +71,8 @@ nav a:hover {
 h1 {
 	font-family: "libre baskerville";
 	font-weight: bold;
-	font-size: 3em; 
+	font-size: 3em;
+	margin: 0;
 	color: #328CC1;
 }
 
@@ -78,9 +91,12 @@ h1 a:hover {
 h2 {
 	font-family: "libre baskerville";
 	font-weight: bold;
+	margin: .75em;
 	font-size: 2em;
-	text-align: left;
+	text-align: center;
 	color: #328CC1;
+	background-color: #1D2731;
+	cursor: pointer;
 }
 
 h4 {
@@ -111,7 +127,7 @@ p.classes {
 	
 p {
 	font-family: 'baskerville';
-	font-size: .8em;
+	font-size: 1.1em;
 	color: #D9B310;
 	text-align: justify;
 	text-justify: inter-word;
@@ -280,7 +296,74 @@ img.trumpetplaying {
 	font-size: 2em;
 	color: #328CC1;
 }
-	
+
+.content-container {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	align-content: space-around;
+}
+
+#Projects {
+	display: grid;
+	text-align: center;
+	margin:.25em;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start:1;
+	grid-row-end: 2;
+}
+
+#Projects p {
+	font-size: 1em;
+	text-align: center;
+}
+
+#Class-Schedule {
+	display: grid;
+	text-align: center;
+	margin: .2em;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start:2;
+	grid-row-end: 3;
+}
+
+#Class-Schedule p {
+	text-align: center;
+}	
+
+.grid-container-home {
+	display: grid;
+	grid-template-columns: auto 8em;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	align-content: space-around;
+}
+
+.Introduction {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start:1;
+	grid-row-end: 2;
+}
+
+.Front-profile {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start:2;
+	grid-row-end: 3;
+	justify-self: center;
+	align-self: center;
+}
+
+.main-profile {
+	width: 12em;
+	margin: auto;
+	border: .25em solid #ffffff;
+	border-radius: 50%;
+}
 
 @media (min-width: 50.0em) {
 	header {
@@ -291,8 +374,17 @@ img.trumpetplaying {
 		font-size: 3em;
 	}
 	
+	.Desktop-navigation {
+		display: flex;
+		justify-content:space-around;
+	}
+	
+	.Menu {
+		display: none;
+	}
+	
 	h4 {
-		font-size: 5em;
+		font-size: 3em;
 		text-align: left;
 		color: #328CC1;
 		margin: 0;
@@ -303,8 +395,8 @@ img.trumpetplaying {
 	}
 	
 	p {
-		font-size: 2em;
-		text-justify: inter-word;
+		font-size: 1.5em;
+		text-justify: inner-word;
 		margin: .2em;
 	}
 	
@@ -429,5 +521,61 @@ img.trumpetplaying {
 		grid-column-end: 5;
 		grid-row-start: 8;
 		grid-row-end: 9;
+		
+	}
+	
+	.content-container {
+		display: grid;
+		grid-template-columns: 75% 25%;
+		grid-template-rows: auto auto;
+		justify-content: center;
+		align-content: space-around;
+	}
+	
+	#Projects p {
+		font-size: 2em;
+	}
+	
+	#Class-Schedule {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+	
+	#Class-Schedule {
+		font-size: 1.3em;
+	}
+	
+	p.classes {
+		font-size: 1.1em;
+	}
+	
+	.grid-container-home {
+		display: grid;
+		grid-template-columns: 75% 25%;
+		grid-template-rows: auto auto;
+		justify-content: center;
+		align-content: space-around;
 }
+	.Introduction {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	.Front-profile {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	.main-profile {
+		width: 12em;
+		margin: auto;
+		border: .25em solid #ffffff;
+		border-radius: 50%;
+	}
 }

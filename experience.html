@@ -2,106 +2,96 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		<title>Experience</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	
-	<body>
-		<header>
-			Cole Gibson's Portfolio
-		</header>
+	<body class="Site">
+		<header>Cole Gibson's Portfolio</header>
 		
-		<nav class= "nav-flex-container">
-			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="resume.html">RESUME</a></li>
-				<li><a href="experience.html">EXPERIENCE</a></li>
-			</ul>
+		<nav class= "Desktop-navigation">
+			<a href="index.html">HOME</a>
+			<a href="resume.html">RESUME</a>
+			<a href="experience.html">EXPERIENCE</a>
 		</nav>
-		<div class="content-flex-container">
-			<section>
-				<h1>Projects</h1>
-				<p>In this space I have included links to various Python projects I have completed for class. I have included audio explaining the first project's purpose as well as to give a brief overview of what will occur.</p>
-				
-				<h1><a href="files/projects/Gibson_DonutCalculator.py">Donut Calculator Program</a></h1>				
-				<div id="audio-container">
-					<audio id="audio1">
-						<source src="../Website/files/audio/Donut_Calculate_Audio.ogg" type="audio/ogg">
-						<source src="../Website?files/audio/Donut_Calculate_Audio.flac" type="audio/flac">
-					</audio>
-					<p>An Explanation of the Donut Calculator Program</p>
-
-					<div id="progress">
-						<div id="bar"></div>
+		
+		<nav class= "Menu">
+			<span class= "menubutton"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></span>
+			<div class="Main-navigation">
+				<a href="index.html">HOME</a><br>
+				<a href="resume.html">RESUME</a><br>
+				<a href="experience.html">EXPERIENCE</a>
+			</div>
+		</nav>
+		
+		<main class="Site-content">
+			<div class="content-container">
+				<section id="Projects">
+					<h1>Projects</h1>
+					<p>In this space I have included links to various Python projects I have completed for class.</p>
+					<div id="accordion">
+						<h2>Python Projects</h2>
+							<div>
+								<p><a href="files/projects/Gibson_DonutCalculator.py">Donut Calculator Program</a></p>
+								<p><a href="files/projects/Gibson_DataPlanSimulator_v2.py">Data Plan Simulator</a></p>
+								<p><a href="files/projects/Assignment3.zip">Text Normalization</a></p>
+								<p><a href="files/projects/Assignment5.zip">Term Frequency GUI</a></p>
+								<p><a href="files/projects/Assignment6.zip">XML to HTML Conversion</a></p>
+								<p><a href="files/projects/Assignment7.zip">Database Browser</a></p>
+							</div>
 					</div>
-
-					<div id="controls">
-						<span id="playpause" class="fa fa-play-circle fa-2x"></span>
-						<span id="stop" class="fa fa-stop-circle fa-2x"></span>
-						<span id="mute" class="fa fa-volume-up fa-2x"></span>
-												
-						<span id="volume-up">
-							<i class="fa fa-volume-up fa-1x"></i>
-							<i class="fa fa-plus fa-1x"></i>
-						</span>
-						<span id="volume-down">
-							<i class="fa fa-volume-up fa-1x"></i>
-							<i class="fa fa-minus fa-1x"></i>
-						</span>
-					</div>
-				</div>
+				</section>
 				
-				<h1><a href="files/projects/Gibson_DataPlanSimulator_v2.py">Data Plan Simulator</a></h1>
-				<h1><a href="files/projects/Assignment3.zip">Text Normalization</a></h1>
-				<h1><a href="files/projects/Assignment5.zip">Term Frequency GUI</a></h1>
-				<h1><a href="files/projects/Assignment6.zip">XML to HTML Conversion</a></h1>
-				<h1><a href="files/projects/Assignment7.zip">Database Browser</a></h1>
-			</section>
-			<aside class="class-schedule">
+				<aside id="Class-Schedule">
 					<h1>Class Experience</h1>
 					<p>Below are the classes that I have completed or am in the process of completing at the School of Information and Library Science at UNC Chapel Hill.
-				<div id="accordion">
-					<h2>Fall 2015</h2>
-						<div>
-							<p class="classes">INLS 500 Human Information Interactions</p>
-							<p class="classes">INLS 501 Information Resources & Services</p>
-							<p class="classes">INLS 520 Organization of Information</p>
-							<p class="classes">INLS 581 Research Methods Overview</p>
-						</div>
-					<h2>Spring 2016</h2>
-						<div>
-							<p class="classes">INLS 513 Resource Selection & Evaluation</p>
-							<p class="classes">INLS 556 Introduction to Archives & Record Management</p>
-						</div>
-					<h2>Fall 2016</h2>
-						<div>
-							<p class="classes">INLS 161 Tools for Information Literacy</p>
-							<p class="classes">INLS 560 Programming for Information Professionals</p>
-							<p class="classes">INLS 585 Management for Information Professionals</p>
-							<p class="classes"> INLS 721 Cataloging Theory & Practice</p>
-						</div>
-					<h2>Spring 2017</h2>
-						<div>
-							<p class="classes">INLS 509 Information Retrieval</p>
-							<p class="classes">INLS 572 Web Development I</p>
-							<p class="classes">INLS 573 Mobile Web Development</p>
-							<p class="classes">INLS 582 Systems Analysis</p>
-							<p class="classes">INLS 757 Archival Description</p>
-							<p class="classes">INLS 781 Proposal Development</p>
-						</div>
-				</div>
-			</aside>
-		</div>
-		<footer>
-			Contact Me:<br>colergibson@gmail.com
-		</footer>
-		<script src="javascript/audio_control.js"></script>
+					<div id="accordion2">
+						<h2>Fall 2015</h2>
+							<div>
+								<p class="classes">INLS 500 Human Information Interactions</p>
+								<p class="classes">INLS 501 Information Resources & Services</p>
+								<p class="classes">INLS 520 Organization of Information</p>
+								<p class="classes">INLS 581 Research Methods Overview</p>
+							</div>
+						<h2>Spring 2016</h2>
+							<div>
+								<p class="classes">INLS 513 Resource Selection & Evaluation</p>
+								<p class="classes">INLS 556 Introduction to Archives & Record Management</p>
+							</div>
+						<h2>Fall 2016</h2>
+							<div>
+								<p class="classes">INLS 161 Tools for Information Literacy</p>
+								<p class="classes">INLS 560 Programming for Information Professionals</p>
+								<p class="classes">INLS 585 Management for Information Professionals</p>
+								<p class="classes">INLS 721 Cataloging Theory & Practice</p>
+							</div>
+						<h2>Spring 2017</h2>
+							<div>
+								<p class="classes">INLS 509 Information Retrieval</p>
+								<p class="classes">INLS 572 Web Development I</p>
+								<p class="classes">INLS 573 Mobile Web Development</p>
+								<p class="classes">INLS 582 Systems Analysis</p>
+								<p class="classes">INLS 757 Archival Description</p>
+								<p class="classes">INLS 781 Proposal Development</p>
+							</div>
+					</div>
+				</aside>
+			</div>
+		</main>
+		
+		<footer>Contact Me:<br>colergibson@gmail.com</footer>
 		<script src="https://use.fontawesome.com/76b18e051a.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="javascript/jquery-ui.js"></script>
+		<script src="javascript/Navigation.js"></script>
 		<script>
 			$(function() {
-			$( "#accordion" ).accordion();
+			$( "#accordion" ).accordion({collapsible : true});
+			});
+
+			$( function() {
+			$( "#accordion2" ).accordion({collapsible : true, active : false});
 			});
 		</script>
 	</body>
