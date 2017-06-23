@@ -1,0 +1,42 @@
+html {
+  font-family: verdana, helvetica, arial, sans-serif;
+  background-color: #E9DCCD;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #36384C;
+  margin: 2em;
+}
+p {
+	font-size: 1em;
+	color: #613A43;
+}
+
+#controls { margin-left: 4em; }
+
+#results {
+  margin-left: 6em;
+  font-size: 1em;
+  color: #849974;
+}
+button {
+    font-size: 1em;
+    padding: 5px 15px;
+    background: #613A43; 
+    border: 1px solid #613A43;
+    border-radius: 7px;
+    color: white;    
+}
+select {
+    font-size: 1em;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 7px;
+} 
+
+#emailResults {
+	display: none;
+	
+}

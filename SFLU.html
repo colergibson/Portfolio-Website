@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>San Francisco Library Usage</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://use.fontawesome.com/da8180ded5.js"></script>
+  </head>
+
+  <body>
+      <header></header>
+	  <p></p>
+	  
+      <section id="controls">
+        <div>Select Library
+            <select id="library">
+            </select><br>
+            <button id="checkoutNumbers">Checkouts by Patron Type</button>
+			<button id="renewalNumbers">Renewals by Patron Type</button>
+			<button id="hasEmail">Patron's with Email Addresses</button>
+		 </div>
+      </section>
+	  
+	  <table id="emailResults">
+		<tr>
+			<th>Email Provided</th>
+			<td><i class="fa fa-envelope fa-3x" aria-hidden="true" style="color:green"></i></td>
+			<td id="emailResultsTrue"></td>
+		</tr>
+		<tr>
+			<th>Email not Provided</th>
+			<td><i class="fa fa-envelope fa-3x" aria-hidden="true" style="color:red"></i></td>
+			<td id="emailResultsFalse"></td>
+		</tr>
+	  </table>
+	  <div id="chart_div"></div>
+<script type="text/javascript">
+	var header = document.querySelector('header');
+	var controls = document.querySelector('#controls');
+    var results = document.querySelector('#results');
+	var select = document.querySelector('#library');
+	var para = document.querySelector('p');
+	
+	var checkoutButton = document.querySelector('#checkoutNumbers');
+    checkoutButton.addEventListener('click', getCheckouts);
+	var renewalButton = document.querySelector('#renewalNumbers');
+	renewalButton.addEventListener('click', getRenewals);
+	var emailButton = document.querySelector('#hasEmail');
+	emailButton.addEventListener('click', checkEmails);
+	
+	var url = 'https://data.sfgov.org/api/views/qzz6-2jup/rows.json';
+    var request = new XMLHttpRequest();
+	var obj;
+	var libraries = [];
+	var patronArray = [];
+	var checkoutArray = [];
+	var patronTypes = [];
+	google.charts.load('current', {'packages':['corechart']});
+	
+	loadData();
+	
+	function loadData() {
+		request.open('GET', url);
+		request.responseType = 'text';
+		request.send();
+		request.onload = function() {
+			var sfluText = request.response;
+			obj = JSON.parse(sfluText);
+			header.textContent = obj.meta.view.name + "-" + obj.meta.view.attribution;
+			para.textContent = obj.meta.view.description;
+			libraries = getLibraries();
+			for (i=0; i < libraries.length; i++) {
+				var opt = document.createElement('option');
+				opt.textContent = libraries[i];
+				select.appendChild(opt);
+			}
+		}
+	}
+	
+	function getLibraries() {
+	   // Create array of counties found in data
+	   var librarySet = new Set();
+       for (i=0; i < obj.data.length; i++) {
+          var library = obj.data[i];
+		  librarySet.add(library[14]);
+       }
+	   return Array.from(librarySet).sort();
+    }
+	
+	function checkEmails() {
+		var chart = document.querySelector('#chart_div');
+		chart.innerHTML = "";
+		var patronEmail = [];
+		patronTypes.length = 0;
+		var patronsWithEmail = 0;
+		var patronsWithoutEmail = 0;
+		for (i=0; i < obj.data.length; i++) {
+			var patron = obj.data[i];
+			if (patron[14] == library.value)  {
+				patronTypes.push(patron[9]);
+				patronEmail.push(patron[19]);
+			}
+		}
+			
+		for (i=0; i < patronTypes.length; i++) {
+			if (patronEmail[i] == true) {
+				patronsWithEmail += 1;
+			}
+		}
+		patronsWithoutEmail = patronTypes.length - patronsWithEmail;
+		var emailDataTrue = document.querySelector('#emailResultsTrue');
+		emailDataTrue.innerHTML = patronsWithEmail;
+		var emailDataFalse = document.querySelector('#emailResultsFalse');
+		emailDataFalse.innerHTML = patronsWithoutEmail;
+		var emailShowData = document.querySelector('#emailResults');
+		emailShowData.style.display = 'block';
+	}
+	
+	function getRenewals() {
+		var emailShowData = document.querySelector('#emailResults');
+		emailShowData.style.display = 'none';
+		var chart = document.querySelector('#chart_div');
+		while (chart.hasChildNodes())  {
+			chart.removeChild(chart.firstChild);
+		}
+		var renewals = [];
+		patronTypes.length = 0;
+	   // Create array of places for selected library
+		for (i=0; i < obj.data.length; i++) {
+			var patron = obj.data[i];
+			if (patron[14] == library.value)  {
+				patronTypes.push(patron[9]);
+				renewals.push(patron[11]);
+			}
+		}
+		patronTypes.sort();
+	   
+		var patronSet = new Set();
+		for (i=0; i < patronTypes.length; i++) {
+			patronSet.add(patronTypes[i]);
+		}
+		patronArray = Array.from(patronSet).sort();
+		renewalArray = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+	   
+		for (i=0; i < patronTypes.length; i++) {
+			var x = 0;
+			while (x < 18) {
+				if (patronTypes[i] == patronArray[x]) {
+					totalRenewals = Number(renewalArray[x]);
+					currentRenewals = Number(renewals[i]);
+					totalRenewals = currentRenewals + totalRenewals;
+					renewalArray[x] = totalRenewals;
+				}
+			x++;
+			}
+		}
+	
+		drawRenewalChart();
+    }
+
+	function drawRenewalChart() {
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Patron Type');
+        data.addColumn('number', 'Renewals');
+        for (i=0; i < patronArray.length; i++) {
+			data.addRows([
+			[patronArray[i], renewalArray[i]],
+			]);
+		}
+
+        // Set chart options
+        var options = {'title':'Renewals Per Patron Type',
+                       'width':1000,
+                       'height':700};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+	}
+	  
+	function getCheckouts() {
+		var emailShowData = document.querySelector('#emailResults');
+		emailShowData.style.display = 'none';
+		var chart = document.querySelector('#chart_div');
+			while (chart.hasChildNodes())  {
+			chart.removeChild(chart.firstChild);
+			}
+
+		checkouts = [];
+		patronTypes.length = 0;
+	   // Create array of places for selected library
+       for (i=0; i < obj.data.length; i++) {
+			var patron = obj.data[i];
+			if (patron[14] == library.value)  {
+				patronTypes.push(patron[9]);
+				checkouts.push(patron[10]);
+			}
+       }
+	   patronTypes.sort();
+	   
+		var patronSet = new Set();
+		for (i=0; i < patronTypes.length; i++) {
+			patronSet.add(patronTypes[i]);
+		}
+		patronArray = Array.from(patronSet).sort();
+		checkoutArray = ["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"];
+	   
+		for (i=0; i < patronTypes.length; i++) {
+			var x = 0;
+			while (x < 18) {
+				if (patronTypes[i] == patronArray[x]) {
+					totalCheckouts = Number(checkoutArray[x]);
+					currentCheckouts = Number(checkouts[i]);
+					totalCheckouts = currentCheckouts + totalCheckouts;
+					checkoutArray[x] = totalCheckouts;
+				}
+			x++;
+			}
+		}
+	
+		drawCheckoutsChart();
+    }
+
+	function drawCheckoutsChart() {
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Patron Type');
+        data.addColumn('number', 'Checkouts');
+        for (i=0; i <patronArray.length; i++) {
+			data.addRows([
+			[patronArray[i], checkoutArray[i]],
+			]);
+		}
+
+        // Set chart options
+        var options = {'title':'Checkouts Per Patron Type',
+                       'width':1000,
+                       'height':700};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+	}
+</script>
+</body>
+</html>
